@@ -1,7 +1,7 @@
 package com.example.SpringSession.dto;
 
 public class ProductDTO {
-    private int salesPrice;
+    private double salesPrice;
     private String description;
     private String title;
     private boolean inStock;
@@ -14,11 +14,11 @@ public class ProductDTO {
         this.inStock = inStock;
     }
 
-    public int getSalesPrice() {
+    public double getSalesPrice() {
         return salesPrice;
     }
 
-    public void setSalesPrice(int salesPrice) {
+    public void setSalesPrice(double salesPrice) {
         this.salesPrice = salesPrice;
     }
 

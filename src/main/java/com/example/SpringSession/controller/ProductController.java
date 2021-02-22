@@ -24,8 +24,8 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PostMapping(path = "/search/{SearchTerm}")
-    public ProductResponseDTO Search(@RequestBody ProductRequestDTO request, @PathVariable String SearchTerm) {
-        return productService.getProducts(request, SearchTerm);
+    @PostMapping(path = "/search")
+    public ProductResponseDTO Search(@RequestBody ProductRequestDTO request) {
+        return productService.getProducts(request);
     }
 }
