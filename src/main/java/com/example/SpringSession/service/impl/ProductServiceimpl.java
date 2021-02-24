@@ -14,6 +14,7 @@ import java.util.concurrent.*;
 
 @Service
 public class ProductServiceimpl implements ProductService, Callable<List<ProductDTO>> {
+
     @Autowired
     private SearchClient searchClient;
     @Override
@@ -102,9 +103,9 @@ public class ProductServiceimpl implements ProductService, Callable<List<Product
             String title = (String) productClientResponse.get("name");
             boolean inStock = (int) productClientResponse.get("isInStock") == 1 ? true : false;
             String description = (String) productClientResponse.get("description");
-            double salePrice = (double) productClientResponse.get("salePrice");
+//            double salePrice = (double) productClientResponse.get("salePrice");
             ProductDTO productDTO = new ProductDTO();
-            productDTO.setSalesPrice(salePrice);
+//            productDTO.setSalesPrice(salePrice);
             productDTO.setInStock(inStock);
             productDTO.setTitle(title);
             productDTO.setDescription(description);
